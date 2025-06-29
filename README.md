@@ -1,10 +1,14 @@
 # moeisoc 智慧晶片系統與應用人才培育計畫 
 ## 第三代
-- 已知BUG，目前設備與本機端可以連線，但數據不同步，待修正 - 20250523
+- 正常服役中...
 
 ## 硬體設備
 - NVIDIA Jetson Orin Nano Super Developer Kit (67 TOPS, 8GB, 25W)
 - M5Stack Core2 ESP32 IoT Development Kit V1.1 開發套件
+
+## 自備材料
+- 皿頭螺絲 M3 14mm (使用2號六角板手)*2
+- 3D列印手錶支架+綁帶
 
 ## 周邊設備
 - Crucial P3 Plus 500GB M.2 2280 PCIe 4.0

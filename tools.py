@@ -5,13 +5,15 @@ import time
 import numpy as np
 import platform as plt
 
+# 全局變數用於按鍵檢測
+reset_counts = False
+
 class CustomVideoCapture():
     def __init__(self, dev=0):
         self.cap = cv2.VideoCapture(dev)
         self.ret = False
         self.frame = None     
         self.win_title = 'Modified with set_title()'
-        self.info = ''
         self.fps = 0
         self.fps_time = 0
         self.isStop = False
@@ -33,6 +35,13 @@ class CustomVideoCapture():
     
     def set_title(self, txt):
         self.win_title = txt
+
+    def check_reset_flag(self):
+        global reset_counts
+        if reset_counts:
+            reset_counts = False
+            return True
+        return False
 
     def video(self):
         try:
@@ -72,17 +81,18 @@ class CustomVideoCapture():
 
                 # Calculate FPS
                 fps_text = f"FPS: {self.fps}"
-                cv2.putText(self.frame, fps_text, (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+                cv2.putText(self.frame, fps_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-                if self.info:
-                    cv2.putText(self.frame, self.info, (10, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-                
                 cv2.namedWindow(self.win_title)
                 cv2.imshow(self.win_title, self.frame)
                 cv2.resizeWindow(self.win_title, 640, 480)
 
-                if cv2.waitKey(1) == 27:  # ESC key
+                key = cv2.waitKey(1) & 0xFF
+                if key == 27:  # ESC key
                     break
+                elif key == ord(' '):  # Space key for reset
+                    global reset_counts
+                    reset_counts = True
                     
                 if close_thread == 1:
                     break
