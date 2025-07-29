@@ -16,8 +16,8 @@
 
 // ===== 配置常數 =====
 // WiFi 配置
-const char* WIFI_SSID = "Biovlsi_1011";  // WiFi 名稱
-const char* WIFI_PASSWORD = "1011101110";      // WiFi 密碼
+const char* WIFI_SSID = "**********";  // WiFi 名稱
+const char* WIFI_PASSWORD = "********";      // WiFi 密碼
 
 // Flask 伺服器配置
 const char* SERVER_HOST = "192.168.1.111";  // IP 地址 - 請確認這是Python伺服器的實際IP
