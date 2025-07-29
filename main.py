@@ -31,12 +31,12 @@ class CounterGUI:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("Exercise Monitor")
-        self.root.geometry("400x200")
+        self.root.geometry("400x350")
         self.root.configure(bg='#f0f0f0')
         
         # 建立標題
-        title_label = tk.Label(self.root, text="居家運動助手 - 電腦輔助捲曲運動", 
-                              font=("Arial", 16, "bold"), bg='#f0f0f0')
+        title_label = tk.Label(self.root, text="Home Exercise Assistant", 
+                      font=("Arial", 16, "bold"), bg='#f0f0f0')
         title_label.pack(pady=10)
         
         # 建立顯示框架
@@ -62,7 +62,7 @@ class CounterGUI:
         self.status_label.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
         
         # 加權計算顯示
-        self.weighted_label = tk.Label(display_frame, text="加權計算: 0", 
+        self.weighted_label = tk.Label(display_frame, text="Weighted calculation: 0", 
                                       font=("Arial", 12), bg='#fff2e6', 
                                       relief="solid", padx=10, pady=5)
         self.weighted_label.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
@@ -91,7 +91,7 @@ class CounterGUI:
         
         # 計算加權計算（兩個數據的最低值）
         weighted_value = min(m5stack_count, tflite_count)
-        self.weighted_label.config(text=f"加權計算: {weighted_value}")
+        self.weighted_label.config(text=f"Weighted calculation: {weighted_value}")
         
     def reset_counts(self):
         """重置計數的回調函數"""
