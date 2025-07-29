@@ -7,7 +7,6 @@ import socket
 import threading
 import sys
 import tkinter as tk
-from tkinter import ttk
 from flask import Flask, request, jsonify
 
 # 嘗試使用 tflite_runtime (Jetson環境)，若失敗則使用標準 tensorflow
