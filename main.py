@@ -75,7 +75,7 @@ class CounterGUI:
         self.reset_button.pack(pady=20)
         
         # 指示說明
-        instruction_label = tk.Label(self.root, text="Press ESC in camera window to exit", 
+        instruction_label = tk.Label(self.root, text="Press X in window to exit", 
                                    font=("Arial", 10), bg='#f0f0f0', fg='#666')
         instruction_label.pack(pady=5)
         
