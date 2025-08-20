@@ -1,7 +1,6 @@
 # 智慧晶片系統與應用人才培育計畫 
 ## 第三代 - 居家運動助手系統
-
-
+- [Jetson Orin Nano 教學手冊 (PDF)](https://github.com/BiovlsiSystemGroup/moeisoc/releases/download/v3.0.0/Jetson.orin.nano._20250813.pdf)
 ## 專案簡介
 本專案是一個基於 AI 視覺識別和 IoT 設備的居家運動監測系統，結合了以下技術：
 - **TensorFlow Lite** 模型進行即時運動姿態識別
