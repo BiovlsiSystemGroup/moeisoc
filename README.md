@@ -66,7 +66,9 @@ moeisoc/
 ├── Anduino_V3/          # Arduino/M5Stack 程式碼
 │   └── Anduino_V3.ino
 └── Case_3D_File_V3/     # 3D 列印檔案
-    └── M5StackCore2Watch.stl
+    ├── JetsonOrinAntenna.stl # 用於壓克力外殼天線
+    └── M5StackCore2Watch.stl # 感測器改手錶工具
+
 ```
 
 ## 使用方法
