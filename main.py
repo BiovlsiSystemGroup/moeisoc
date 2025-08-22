@@ -88,7 +88,10 @@ class CounterGUI:
         self.tflite_label.config(text=f"TFLite: {tflite_count}")
         self.status_label.config(text=f"Status: {status}")
         
-        # 計算加權計算（兩個數據的最低值）
+        # 計算加權計算
+        #
+        # 取兩個數據的最小值作為加權計算的結果 
+        #
         weighted_value = min(m5stack_count, tflite_count)
         self.weighted_label.config(text=f"Weighted calculation: {weighted_value}")
         
